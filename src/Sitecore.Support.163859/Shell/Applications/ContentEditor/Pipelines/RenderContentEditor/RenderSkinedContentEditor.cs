@@ -255,7 +255,7 @@ namespace Sitecore.Support.Shell.Applications.ContentEditor.Pipelines.RenderCont
                     readOnly = true;
                 }
                 Assert.ArgumentNotNull((object)args, "args");
-                args.EditorFormatter = new CustomEditorFormatter() { Arguments = args };
+                args.EditorFormatter = new EditorFormatter() { Arguments = args };
                 this.args.EditorFormatter.RenderField(this.args.Parent, field, fieldType, readOnly);
             }
 

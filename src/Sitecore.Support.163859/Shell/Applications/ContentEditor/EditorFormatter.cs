@@ -13,7 +13,7 @@ using Sitecore.Web.UI.HtmlControls;
 
 namespace Sitecore.Support.Shell.Applications.ContentEditor
 {
-    public class CustomEditorFormatter : Sitecore.Shell.Applications.ContentEditor.EditorFormatter
+    public class EditorFormatter : Sitecore.Shell.Applications.ContentEditor.EditorFormatter
     {
         public override void RenderField(System.Web.UI.Control parent, Editor.Field field, Item fieldType, bool readOnly)
         {
@@ -148,7 +148,7 @@ namespace Sitecore.Support.Shell.Applications.ContentEditor
                 ID = field.ControlID + "_container"
             };
             Context.ClientPage.AddControl(parent, control);
-            CustomEditorFormatter.SetXProperties(editor, field, readOnly);
+            EditorFormatter.SetXProperties(editor, field, readOnly);
             EditorFormatter.SetAttributes(editor, field, hasRibbon);
             EditorFormatter.SetStyle(editor, field);
             this.SetValue(editor, value);

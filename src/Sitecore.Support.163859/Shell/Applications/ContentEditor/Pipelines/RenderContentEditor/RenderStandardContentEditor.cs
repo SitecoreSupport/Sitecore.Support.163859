@@ -15,7 +15,7 @@ namespace Sitecore.Support.Shell.Applications.ContentEditor.Pipelines.RenderCont
         public new void Process(RenderContentEditorArgs args)
         {
             Assert.ArgumentNotNull((object)args, "args");
-            args.EditorFormatter = new CustomEditorFormatter() { Arguments = args };
+            args.EditorFormatter = new EditorFormatter() { Arguments = args };
             base.Process(args);
         }
     }
